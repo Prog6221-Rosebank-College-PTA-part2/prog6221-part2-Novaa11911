@@ -1,0 +1,58 @@
+﻿<Window x:Class="chat_part2.TaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Task"
+        Height="550"
+        Width="700"
+        Background="black">
+
+    <Grid Margin="15">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="431*"/>
+        </Grid.RowDefinitions>
+
+       
+        <StackPanel Orientation="Horizontal"
+                    Margin="0,0,0,10">
+
+            <Button Content="⬅ Chat"
+                    Width="150"
+                    Height="40"
+                    Background="Red"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Click="BackToChat_Click"
+                    Margin="0,0,10,0"/>
+
+            <TextBox x:Name="TaskInput"
+                     Width="350"
+                     Height="40"
+                     Background="gray"
+                     Foreground="Black"
+                     Padding="10"
+                     BorderThickness="0"/>
+
+            <Button Content="Add Task"
+                    Width="120"
+                    Height="40"
+                    Background="green"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Click="AddTask_Click"
+                    Margin="10,0,0,0"/>
+
+        </StackPanel>
+
+    
+        <ListBox x:Name="TaskList"
+                 Grid.Row="1"
+                 Background="Gray"
+                 Foreground="Black"
+                 FontSize="14"
+                 BorderThickness="0" Grid.RowSpan="2"/>
+
+    </Grid>
+</Window>

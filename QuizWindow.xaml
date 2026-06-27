@@ -1,0 +1,71 @@
+﻿<Window x:Class="chat_part2.QuizWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="task"
+        Height="600"
+        Width="750"
+        Background="black">
+
+    <Grid Margin="20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        
+        <Button Content="⬅ Chat"
+                Width="150"
+                Height="40"
+                Background="red"
+                Foreground="White"
+                BorderThickness="0"
+                Click="BackToChat_Click"
+                HorizontalAlignment="Left"/>
+
+        <!-- QUESTION -->
+        <TextBlock x:Name="QuestionText"
+                   Grid.Row="1"
+                   FontSize="20"
+                   Foreground="WHITE"
+                   Margin="0,20,0,20"
+                   TextWrapping="Wrap"/>
+
+        <!-- OPTIONS -->
+        <StackPanel Grid.Row="2">
+
+            <Button x:Name="BtnA"
+                    Height="50"
+                    Margin="5"
+                    Click="Answer_Click"
+                    Background="Gray"/>
+
+            <Button x:Name="BtnB"
+                    Height="50"
+                    Margin="5"
+                    Click="Answer_Click"
+                    Background="Gray"/>
+
+            <Button x:Name="BtnC"
+                    Height="50"
+                    Margin="5"
+                    Background="GRAY"
+                    Click="Answer_Click"/>
+
+            <Button x:Name="BtnD"
+                    Height="50"
+                    Margin="5"
+                    Background="Gray"
+                    Click="Answer_Click"/>
+
+            <!-- SCORE -->
+            <TextBlock x:Name="ScoreText"
+                       Foreground="white"
+                       FontSize="16"
+                       Margin="10"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
